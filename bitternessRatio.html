@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Libraries -->
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/knockout.js"></script>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="bitterness.js"></script>
+
+    <title>Beer Bitterness Ratio Calculator</title>
+  </head>
+
+  <body id="Scoreboard">
+    <div class="container">
+      <div class="content">
+
+        <label for="ibu">IBU: </label>
+        <input type="text" id="ibu" data-bind="value: bu"/>
+        <label for="originalGravity">Original Gravity: </label>
+        <input type="text" id="originalGravity" data-bind="value: og"/>
+        <label for="finalGravity">Final Gravity: </label>
+        <input type="text" id="finalGravity" data-bind="value: fg"/>
+        <button data-bind="click: calculateRatios">Calculate</button>
+
+        <ul class="resuts">
+          <li>
+            <label for="OBR">Bitterness Ratio (BU:OG): </label>
+            <input readonly type="text" id="OBR" data-bind="value: obr"/>
+          </li>
+          <li>
+            <label for="RBR">Relative Bitterness Ratio: </label>
+            <input readonly type="text" id="RBR" data-bind="value: rbr"/>
+          </li>
+          <li>
+            <label for="BURE">BU:RE Ratio: </label>
+            <input readonly type="text" id="BURE" data-bind="value: bure"/>
+          </li>
+           <li>
+            <label for="HBM">HBM Bitterness Ratio: </label>
+            <input readonly type="text" id="HBM" data-bind="value: hbm"/>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </body>
+</html>
